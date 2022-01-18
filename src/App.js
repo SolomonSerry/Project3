@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Main from './Main.js';
+import Header from './Header.js';
 import './App.css';
 
 function App() {
+  const apiKey = 'ffa3e4a7e25c87e4ff68807699b7cc3d'
+
+  const [movie, setMovie] = useState([]);
+
+  useEffect( () => {
+    axios({
+      url: 'https://api.themoviedb.org/3/movie/popular?',
+      method: 'GET',
+      dataResponse: 'json',
+      params: {
+        api_key: apiKey,
+        language: 'en-US',
+        page: 1
+      }
+    }).then((response) => {
+      setMovie(response.data.results)
+    })
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+
+      <Main 
+      movieInfo={movie}
+      setMovieInfo={setMovie}
+      />
+
+
+    
     </div>
   );
 }
