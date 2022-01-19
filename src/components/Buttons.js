@@ -1,9 +1,11 @@
-const Buttons = () => {
+const Buttons = ( props ) => {
+
     return (
         <div>
-            <button>Previous</button>
-            <button>Reset</button>
-            <button>Next</button>
+            <button onClick={()=> props.setPage(props.page - 1 )}>Previous</button>
+           
+            <button onClick={() => props.setPage(props.page + 1)}>Next</button>
+          
         </div>
     )
 }
