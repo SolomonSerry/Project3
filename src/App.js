@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Main from './Main.js';
-import Header from './Header.js';
+import Main from './components/Main.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import Buttons from './components/Buttons.js';
 import './App.css';
 
 function App() {
@@ -26,12 +28,18 @@ function App() {
 
   return (
     <div>
+     <header>
       <Header />
+      <Buttons />
+     </header>
+
+   
 
       <Main 
-      movieInfo={movie}
-      setMovieInfo={setMovie}
+      movie={movie}
       />
+
+      <Footer />
 
 
     
