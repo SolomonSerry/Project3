@@ -30,16 +30,26 @@ function App() {
 
   return (
     <div>
-     <header>
+     
       <Header />
-      <Buttons setPage={setPage} page={page} />
-     </header>
+      
+      <Buttons 
+        setPage={setPage} 
+        page={page} 
+        />
+  
 
    
+      <main>
 
-      <Main 
-      movie={movie}
-      />
+        <div className='movieContainer wrapper'>
+
+          <Main 
+          movie={movie}
+          />
+        </div>
+
+      </main>
 
       <Popups>
        

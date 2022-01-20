@@ -1,9 +1,12 @@
+import { FaCopyright } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div>
-            <p>Made in 2022 By Solomon Serry @ <a href="#">Juno College</a></p>
-        </div>
+        <footer>
+            <div className="wrapper">
+                <p> <FaCopyright className="copywrite" /> 2022 Created @ <a href="https://junocollege.com/">Juno College</a> By Solomon Serry</p>
+            </div>
+        </footer>
     )
 }
 
