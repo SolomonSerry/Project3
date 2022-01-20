@@ -120,13 +120,13 @@ nav div {
   padding-bottom: 40px;
 }
 
-img {
+.movieImg {
   transition: filter 0.5s ease;
   transition: opacity 0.5s ease;
   opacity: 100%;
 }
 
-img:hover {
+.movieImg:hover {
   filter: drop-shadow(0 10px 0.6rem black);
   opacity: 50%;
 }
@@ -155,13 +155,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #e5e5e5 solid 3px;
+
 }
 
 .popupInner {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 600px;
   max-width: 1000px;
   background-color: #14213D;
   color: #e5e5e5;
@@ -182,6 +182,20 @@ footer {
   border-radius: 20%;
   padding: 10px 12px 5px 12px;
 
+}
+
+.flexContainer {
+  display: flex;
+  padding-top: 40px;
+  margin: 0 40px;
+}
+
+.flexContainer h3 {
+  text-align: center;
+}
+
+.contentContainer {
+  margin-left: 40px ;
 }
 
 /* starting of media querys */

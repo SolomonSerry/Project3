@@ -12,7 +12,8 @@ function App() {
 
   const [movie, setMovie] = useState([]);
   const [page, setPage] = useState(1);
-  const [popup, setPopup] = useState(false)
+  const [popup, setPopup] = useState(false);
+  const [movieInfo, setMovieInfo] = useState([]);
 
   useEffect( () => {
     if(page < 1){
@@ -39,9 +40,10 @@ function App() {
     })
   }, [page])
 
+  console.log(movieInfo)
   return (
     <div>
-     
+    
       <Header />
       
       <Buttons 
@@ -54,6 +56,7 @@ function App() {
           <Main 
             movie={movie}
             setPopup={setPopup}
+            setMovieInfo={setMovieInfo}
           />
         </div>
       </main>
@@ -62,6 +65,7 @@ function App() {
       trigger={popup} 
       setTrigger={setPopup}
       movie={movie}
+      movieInfo={movieInfo}
       > 
       </Popups>
 
