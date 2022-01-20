@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const Main = ({movie, setPopup, setMovieInfo}) => {
     const setBoth = (event) => {
