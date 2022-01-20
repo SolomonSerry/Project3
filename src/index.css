@@ -49,10 +49,6 @@ h4 {
   margin: 0 auto;
 }
 
-
-
-
-
 /* header styling */
 
 header {
@@ -61,7 +57,7 @@ header {
   padding-bottom: 20px;
 }
 
-/* setting up nav bar area  */
+/* setting up nav bar styling */
 
 .navContainer {
   display: flex;
@@ -86,7 +82,7 @@ nav div {
   font-size: 2rem;
   
 }
-/* setting title */
+/* setting up title styling */
 
 .title {
   text-align: center;
@@ -94,7 +90,7 @@ nav div {
 }
 
 
-/* setting button area */
+/* stlying page button area */
 
 .btnContainer {
   padding: 30px;
@@ -108,8 +104,8 @@ nav div {
   font-size: 2rem;
   padding-top: 10px;
   border-radius: 20%;
-  
 }
+
 /* main content area  */
 
 .movieContainer {
@@ -135,7 +131,7 @@ img:hover {
   opacity: 50%;
 }
 
-/* setting footer area  */
+/* styling footer area  */
 
 footer {
   text-align: center;
@@ -146,6 +142,46 @@ footer {
 
 .copywrite {
   padding-top: 5px;
+}
+
+/* popup styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #e5e5e5 solid 3px;
+}
+
+.popupInner {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  max-width: 1000px;
+  background-color: #14213D;
+  color: #e5e5e5;
+}
+
+.popupInner h2 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background-color: #fca311;
+  font-size: 1rem;
+  border-radius: 20%;
+  padding: 10px 12px 5px 12px;
+
 }
 
 /* starting of media querys */

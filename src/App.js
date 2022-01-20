@@ -12,6 +12,16 @@ function App() {
 
   const [movie, setMovie] = useState([]);
   const [page, setPage] = useState(1);
+  const [popup, setPopup] = useState(false)
+
+  useEffect( () => {
+    if(page < 1){
+      setPage(20)
+    } else if (page > 20){
+      setPage(1)
+    }
+  }, [page])
+
 
   useEffect( () => {
     axios({
@@ -25,6 +35,7 @@ function App() {
       }
     }).then((response) => {
       setMovie(response.data.results)
+      
     })
   }, [page])
 
@@ -38,29 +49,23 @@ function App() {
         page={page} 
         />
   
-
-   
       <main>
-
-        <div className='movieContainer wrapper'>
-
+        <div className='movieContainer wrapper'> 
           <Main 
-          movie={movie}
+            movie={movie}
+            setPopup={setPopup}
           />
         </div>
-
       </main>
 
-      <Popups>
-       
+      <Popups 
+      trigger={popup} 
+      setTrigger={setPopup}
+      movie={movie}
+      > 
       </Popups>
 
-
-
       <Footer />
-
-
-    
     </div>
   );
 }
