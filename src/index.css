@@ -238,8 +238,13 @@ footer {
     text-align: center;
   }
 
+  .popup {
+    position: absolute;
+  }
+
   .popupInner {
     height: 100vh;
+
   }
 
   .contentContainer {
