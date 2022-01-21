@@ -1,3 +1,9 @@
+// App.js
+
+// My original idea for this app was to have our movie sort out my genre but after the approval of my scope I quickly realize that the endpoint for genre didnt give you back the movie for each genre type but just the genre.  so i decided to use the end point the gives you movie based off of popularity.  There are several pages of movie we can search through as well as click all individual movies and have a popup with additional info.
+
+// Sorry for the confusion.
+
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Main from './components/Main.js';

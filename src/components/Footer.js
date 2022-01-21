@@ -1,3 +1,5 @@
+// Footer.js
+
 import { FaCopyright } from "react-icons/fa";
 
 const Footer = () => {

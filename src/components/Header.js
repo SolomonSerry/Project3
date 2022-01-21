@@ -1,4 +1,5 @@
-import { FaBars } from "react-icons/fa";
+// Header.js
+
 import { RiMovie2Fill } from "react-icons/ri";
 
 const Header = () => {

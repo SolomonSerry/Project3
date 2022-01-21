@@ -1,3 +1,4 @@
+// Main.js
 
 const Main = ({movie, setPopup, setMovieInfo}) => {
     

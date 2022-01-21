@@ -1,3 +1,5 @@
+// Buttons.js
+
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Buttons = ( props ) => {

@@ -1,3 +1,5 @@
+// Popups.js
+
 import { ImCross } from "react-icons/im";
 import React from "react";
 
