@@ -10,9 +10,6 @@ const Header = () => {
                     <RiMovie2Fill />
                         <h3>Movie App</h3>
                     </div>
-                    <button className="menuIcon" >
-                    <FaBars />   
-                    </button>
                 </div>
             </nav>
         

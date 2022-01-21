@@ -14,6 +14,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [popup, setPopup] = useState(false);
   const [movieInfo, setMovieInfo] = useState([]);
+  const [error, setError] = useState(null)
 
   useEffect( () => {
     if(page < 1){
@@ -35,24 +36,27 @@ function App() {
         page: page
       }
     }).then((response) => {
-      setMovie(response.data.results)
+        setMovie(response.data.results)
+        setError(null)
       
+    }).catch((error) => {
+      setError(error.message)
     })
   }, [page])
-
-  console.log(movieInfo)
+  
   return (
     <div>
     
       <Header />
       
-      <Buttons 
-        setPage={setPage} 
-        page={page} 
-        />
   
       <main>
+        <Buttons 
+          setPage={setPage} 
+          page={page} 
+          />
         <div className='movieContainer wrapper'> 
+        {error && <div>{error}</div>}
           <Main 
             movie={movie}
             setPopup={setPopup}

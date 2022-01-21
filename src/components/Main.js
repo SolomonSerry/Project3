@@ -1,5 +1,6 @@
 
 const Main = ({movie, setPopup, setMovieInfo}) => {
+    
     const setBoth = (event) => {
         setPopup(true)
         setMovieInfo(event)
